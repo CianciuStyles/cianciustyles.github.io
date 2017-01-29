@@ -8,13 +8,13 @@
 
 <title>
   
-    Tag: Seminars
+    Archive: 2017
   
 </title>
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stefano Cianciulli">
-<meta property="og:url" content="https://cianciustyles.github.io/tags/Seminars/index.html">
+<meta property="og:url" content="https://cianciustyles.github.io/archives/2017/index.html">
 <meta property="og:site_name" content="Stefano Cianciulli">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Stefano Cianciulli">
@@ -164,81 +164,69 @@
       
         <div style="max-width: 1000px">
       
-          <h1>Seminars</h1>
-
+          
 
   
   
-    <div class="post-list">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
+        </div>
+        <div class="post-list">
+    
   
 
     <div class="post-list-item article">
       <h3 class="article-header">
-        <a href="/2016/11/15/AWS-Technical-Essentials/" >
-  AWS Technical Essentials
+        <a href="/2017/01/23/My-First-Contribution-To-Open-Source!/" >
+  My First Contribution to Open Source!
 </a>
 
       </h3>
       
 
       <div class="article-info">
-        <a href="/2016/11/15/AWS-Technical-Essentials/"><span class="article-date">
-  2016/11/15
+        <a href="/2017/01/23/My-First-Contribution-To-Open-Source!/"><span class="article-date">
+  2017/01/23
 </span>
 </a>
         
 
         
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/London/">London</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Seminars/">Seminars</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Open-Source/">Open Source</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</span>
 
 
       </div>
       <div class="article-entry">
         
-          <p>Hello! My name is Stefano, and this is the first post I get to write on a blog, ever! I waited so long before sitting down and taking some time to create my personal blog and write this post for the usual “Who in the world would care about another programmer’s blog?” and “I don’t think I have anything interesting enough to be published online…” thoughts that I guess wander in the mind of someone about to do it, but I figured out it would be an encouraging and “unlocking” experience to just start with baby steps and see where this will go, so… here I am!</p>
-<p>In this first post, I would like to talk about an Amazon Web Services seminar I got to attend last week in the beautiful Beaufort House in Aldgate, central London.<br><img src="/2016/11/15/AWS-Technical-Essentials/beaufort-house.jpg" alt="Beaufort House in Aldgate" title="Beaufort House in Aldgate"></p>
-<p>It is called AWS Technical Essentials, as it is supposed to be a one-day overview and crash course on the most important services offered by the Amazon Web Services platform, mainly aimed at programmers and software engineers completely new to or with little experience with AWS. The course was divided into both theoretical presentations and hands-on labs, which I found very useful to immediately check and employ the knowledge I had just acquired by attending the former.</p>
-<p>Some of the notes I took (by pen and paper!) include the following:</p>
+          <p>Hello again!</p>
+<p>Since I started my new job last June, I have been fulfilling one of my long-standing desires: to learn everything I could about the <a href="https://www.djangoproject.com/" target="_blank" rel="external">Django</a> framework. Unsurprisingly, this craving has been postponed many times by several factors, but now that I am getting my hands dirty with it every single day, I can really acknowledge the admiration and regard you can easily read about it all over the Internet, and I must say I agree with it (except in some rather peculiar circumstances :P)!</p>
+<p>Anyway, to understand better what’s going on and why things work in a certain way (and why some others don’t), I thought it would be a good idea to find some Django projects on <a href="https://github.com/" target="_blank" rel="external">GitHub</a>, read their code to see how they organized it, and maybe apply some of the knowledge I have been acquiring by solving some of the bugs reported by the end users.</p>
+<p>One of the first Django-based projects I laid my eyes on is the <a href="https://www.python.org" target="_blank" rel="external">official website for Python</a>, so without reading much of its code (I am still in the process of reading it thoroughly for the first time) I jumped immediately in the issue tracker to see if there was one simple enough to solve for a beginner like me. In fact, I found <a href="https://github.com/python/pythondotorg/issues/883" target="_blank" rel="external">one</a> that <em>seemed</em> quite easy to start with:</p>
+<p><img src="https://cloud.githubusercontent.com/assets/1864489/12796759/5bfa94b4-cab8-11e5-971a-fe61cfac4b89.jpg" alt="The layout is behaving in a quite bizarre way here"></p>
+<p>It was quite easy to see that something was not going on well with the results of search for events: the strings ‘From at’ and ‘though at’ are collapsed one on top of the other, they are not where they are supposed to be, and there is no indication of the start and end date and time of these events.</p>
+<p>What was a little bit <em>less</em> easy to see for a beginner was:</p>
 <ul>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions-availability-zones" target="_blank" rel="external">Availability zones (AZs)</a> comprise at least two regions, and are basically clusters of data centers</li>
-<li>Currently there are 14 regions and 35 availability zones</li>
-<li>Not all the regions have the same price</li>
-<li>The edge locations are some special cache locations where end users access AWS services</li>
-<li>MFA stands for <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication" target="_blank" rel="external">Multi Factor Authentication</a></li>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html" target="_blank" rel="external">AMIs (Amazon Machine Images)</a> are templates for <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html" target="_blank" rel="external">EC2 (Elastic Compute Cloud)</a> instances</li>
-<li><a href="https://aws.amazon.com/cloudformation/" target="_blank" rel="external">CloudFormation</a> is the way to go to create an EC2 template based on AMIs</li>
-<li>Once you reach a steady-state service, it is far more convenient to switch to <a href="https://aws.amazon.com/ec2/pricing/reserved-instances/" target="_blank" rel="external"><em>reserved instances</em></a> (which save up to 75% with respect to on-demand instances)</li>
-<li>Once you enable <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html" target="_blank" rel="external">versioning</a> in <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html" target="_blank" rel="external">S3 (Simple Storage Service)</a>, there is no way to disable it (you can just freeze it)</li>
-<li>You can retrieve earlier versions of a file in S3 by deleting the <em>delete markers</em> on that particular file</li>
-<li><a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html" target="_blank" rel="external">Lifecycle rules</a> allow you to automatically move your files to a cheaper environment, based on time rules specified by you</li>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html" target="_blank" rel="external">EBS (Elastic Block Store)</a> is like an hard drive for EC2 instances. EBSs are persistent, i.e. they will live even after the EC2 instance to which it’s attached  has been terminated</li>
-<li><strong>Everyone</strong> is responsible for security</li>
-<li>The best thing is to build security together with your application, not adding it later on</li>
-<li><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html" target="_blank" rel="external">Federating</a> users means to allow users from other services/locations to login and authenticate</li>
-<li><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id.html" target="_blank" rel="external">Roles and groups</a> are not the same thing: groups are “containers” for accounts, while roles are the entities which actually receive authorizations and permissions</li>
-<li>There is only a layer of <a href="https://aws.amazon.com/documentation/iam/" target="_blank" rel="external">IAM (Identity and Access Management)</a> groups, i.e. you can’t create a group within a group</li>
-<li>If you don’t specify a role for an EC2 instance while creating it, there’s no way to do it afterwards, so you’ll need to recreate it</li>
-<li><em>Authentication</em> is gaining access to a service; <em>authorization</em> is being able to do stuff</li>
-<li>Identity provider is for federating users (a.k.a. Single Sign In)</li>
-<li><em>Vertical escalation</em> means to give more CPU, RAM, disk, or any other resource to a single instance of a service; <em>horizontal escalation</em> means to spin up a new instance of the service and split the load</li>
-<li><em>Durability</em> means “is my data going to be there?”; <em>availability</em> means “is my data available now?”</li>
-<li><a href="https://aws.amazon.com/elasticloadbalancing/" target="_blank" rel="external">ELB (Elastic Load Balancing)</a>, <a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="external">CloudWatch</a> and <a href="https://aws.amazon.com/autoscaling/" target="_blank" rel="external">Auto Scaling</a> form an environment for dynamic growing/shrinking web applications</li>
-<li>Sticky sessions are requests which will end up always at the same server</li>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html" target="_blank" rel="external">User data</a> is a script which can be run just after the EC2 instance has been created</li>
-<li><a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/LaunchConfiguration.html" target="_blank" rel="external">Launch Configurations</a> are similar to CloudFormation scripts, but include also auto scaling information</li>
-<li><a href="https://aws.amazon.com/premiumsupport/trustedadvisor/" target="_blank" rel="external">Trusted Advisor</a> is a service which can audit your instances and report about performance, costs, etc.</li>
-<li>Trusted Advisor cannot change settings on your behalf, you have to manually change them yourself</li>
+<li>there is an <a href="https://pythondotorg.readthedocs.io/install.html#vagrant-setup" target="_blank" rel="external">easy way</a> to setup a development environment to start working on the problem but it relies on Ansible, which is not available under Windows (which is installed on my laptop) unless you install Cygwin and a whole bunch of packages, and after doing all of this I was still not able to spin up and provision the VM auto-magic-ally;</li>
+<li>there is a <a href="https://pythondotorg.readthedocs.io/install.html#manual-setup" target="_blank" rel="external">manual way</a> to setup a development environment (which I ended up using), but it took a lot of trial-and-error cycles to understand that I had to download the 14.04 version of Ubuntu, some older libraries (as the project is based on Django 1.7), and so on and so forth;</li>
+<li>the search is implemented through <a href="http://haystacksearch.org/" target="_blank" rel="external">Haystack</a> and <a href="https://www.elastic.co/downloads/elasticsearch" target="_blank" rel="external">Elasticsearch</a> (both of which I have never used in the past), so it took me some time to install and configure them properly.</li>
 </ul>
-<p>Wrapping up, I really enjoyed this brief but intense course, I think it gave me a nice overview on the de facto standard platform nowadays, and therefore very useful and interesting to know something about. I would like to thank again a lot <a href="https://www.linkedin.com/in/ryan-little-97347227" target="_blank" rel="external">Ryan Little</a> and <a href="https://www.linkedin.com/in/arlenvartazarian" target="_blank" rel="external">Arlen Vartazarian</a>, which have been my patient and engaging instructors, and say that I hope to meet you again soon!</p>
+<p>After a week of understanding and failed attempts, I figured out that the problem with the positioning of the two strings was caused by the reuse of a CSS class designed for another page (in which, effectively, they are displayed in the left side of their container) and that, in the case of the missing start and end dates, the problem was that they were being retrieved in the wrong way from the Haystack results. So, without further ado, I went on and created a <a href="https://github.com/python/pythondotorg/pull/1036" target="_blank" rel="external">pull request</a>… in fact, my first pull request ever!</p>
+<p>Since it was so <a href="https://github.com/python/pythondotorg/pull/1036#issuecomment-268206820" target="_blank" rel="external">well-received</a> from the project’s mantainer, I felt motivated to try go through the process once again… but this time I aimed a little higher: I chose to work on an <a href="https://github.com/python/pythondotorg/issues/731" target="_blank" rel="external">issue</a> reported by <a href="https://gvanrossum.github.io/" target="_blank" rel="external">Guido van Rossum</a> himself! The misbehaviour in this case was that, when the width of the browser window was under a certain value, a spurious portion of the blue background was shown, and this also caused the horizontal scrollbar to appear. One of the contributors suggested that it was likely to be caused by the implementation of the dropdown menus and, after some investigation in the CSS definitions, I was able to confirm that this was indeed the case:</p>
+<img src="/2017/01/23/My-First-Contribution-To-Open-Source!/dropdown-overflow.jpg" alt="The dropdown menu exceeds the margins of the layout, causing the overflow" title="The dropdown menu exceeds the margins of the layout, causing the overflow">
+<p>Interestingly, the issue appeared only when the dropdown menus associated with the Socialize and Sign In were hidden, and would promptly vanish as soon as the dropdown menus were shown. From this observation, I simply changed the way in which these menus are hidden (removing them effectively from the page layout), so that the problem could not (and would not) show up <em>by design</em>.</p>
+<p>After some testing and with the blessing of the <a href="https://github.com/python/pythondotorg/pull/1047" target="_blank" rel="external">Benevolent Dictator For Life</a>, my <a href="https://wiki.python.org/moin/BDFL" target="_blank" rel="external">pull request</a> was finally merged and deployed onto the production server!</p>
+<p><strong>TL;DR (long story short, in today’s Internet lingo): I fixed a couple of bugs in the official website of Python, I enjoyed the whole process, the reception was better than I expected, so I will probably do it again in the near future.</strong></p>
 
         
       </div>
     </div>
 
-  
-    </div>
   
 
 
