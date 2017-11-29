@@ -114,14 +114,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Clean-Code/">Clean Code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/London/">London</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/My-Notes/">My Notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Open-Source/">Open Source</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seminars/">Seminars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Uncle-Bob/">Uncle Bob</a><span class="tag-list-count">1</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Clean-Code/">Clean Code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/London/">London</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/My-Notes/">My Notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Open-Source/">Open Source</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seminars/">Seminars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Training/">Training</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Uncle-Bob/">Uncle Bob</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">1</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">1</span></li></ul>
               </li>
             
           
@@ -158,6 +158,66 @@
         <div style="max-width: 1000px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/11/29/Advanced-Web-Application-Security-Training/" >
+  Advanced Web Application Security Training
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/11/29/Advanced-Web-Application-Security-Training/"><span class="article-date">
+  2017/11/29
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Training/">Training</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>In September I had the opportunity to attend a two-day training about security in web applications held by <a href="https://securitum.pl" target="_blank" rel="external">Securitum</a>. I thought it would have been an excellent opportunity to gain some more insight on the best practices to follow while working on the Django web application around which my job revolves every day.</p>
+<p>The training was structured in sections, one for each of the several vulnerabilities we analysed, where each section was opened by a theoretical explanation and later followed by a “hands-on” exercise where we were required to exploit the flaw we had just learned about in order to bypass the security of a fictional system and gain access to some information we should not have been able to reach.</p>
+<p>Among the vulnerabilities I learned about during the training, I was particularly struck by the <a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing" target="_blank" rel="external">XML External Entity</a> one. If you are not familiar with this, it basically revolves around the possibility offered by XML to define your own entities in documents, like in the following code fragment:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line">  <span class="meta">&lt;!DOCTYPE foo [  </span></div><div class="line">   &lt;!ELEMENT foo ANY &gt;</div><div class="line">   &lt;!ENTITY xxe SYSTEM "file:///dev/random" &gt;]&gt;</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">foo</span>&gt;</span></div><div class="line">    &amp;xxe;</div><div class="line">  <span class="tag">&lt;/<span class="name">foo</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>The possible values after the <code>SYSTEM</code> keyword can be:</p>
+<ul>
+<li>a file on the server, whose contents will replace the entity;</li>
+<li>a directory on the server, whose file listing will replace the entity;</li>
+<li>an HTTP request, whose response will replace the entity.</li>
+</ul>
+<p>Since most of the XML parsers have the option for parsing and resolving external entities activated by default, it could be an easy attack vector for getting the contents of some file or service we should not be able to access remotely, as in the screenshot below:</p>
+<img src="/2017/11/29/Advanced-Web-Application-Security-Training/xxe.png" alt="XXE vulnerability in Burp Suite Free" title="XXE vulnerability in Burp Suite Free">
+<p>Another vulnerability we analysed is the famous <a href="https://docs.python.org/2/library/pickle.html" target="_blank" rel="external">pickle</a> module in Python. This module is able to serialise and deserialise Python objects as byte streams using a specific stack-based language: basically the output of the <code>pickle</code> operation is a program which is then able to recreate the serialised Python data structures. In this case, the problem arises when an attacker is able to modify the representation of a pickled object to inject code that gets executed remotely when Pickle deserialises the object. For example, in the code fragment below we are telling Python to call the <code>os.system</code> function with <code>echo hello world</code> as a parameter, which will print the string <code>hello world</code> on the server:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cos</div><div class="line">system</div><div class="line">(S&apos;echo hello world&apos;</div><div class="line">tR.</div></pre></td></tr></table></figure>
+<p>The last vulnerability is a variation of the <a href="https://docs.mongodb.com/manual/faq/fundamentals/#javascript" target="_blank" rel="external">NoSQL injection affecting MongoDB</a>, which allows you to run arbitrary JavaScript code on the server for some of its operations (e.g., in the <code>$where</code> clause in a query). This obviously can be used as a vector attack for accessing records we should not have access to. For example, if on the server we have this code for querying the users table in our database</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.myCollection.find(&#123; active: <span class="literal">true</span>, $where: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> obj.username == $user &amp;&amp; obj.password == $pass; &#125; &#125;);</div></pre></td></tr></table></figure>
+<p>and we send a request to the server formatted as following</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://www.example.com/query?user=&quot;admin&quot;;&#125;&#125;);//&amp;pass=</div></pre></td></tr></table></figure>
+<p>this gets translated in MongoDB as the following query</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.myCollection.find(&#123; active: <span class="literal">true</span>, $where: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> obj.username == <span class="string">"admin"</span>;&#125;&#125;);<span class="comment">// &amp;&amp; obj.password == "" ; &#125; &#125;);</span></div></pre></td></tr></table></figure>
+<p>which could possibly allow us to login as the ‘admin’ user (if there is one in the table).</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
