@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,6 +16,7 @@
 <meta property="og:title" content="Stefano Cianciulli">
 <meta property="og:url" content="https://cianciustyles.github.io/tags/My-Notes/index.html">
 <meta property="og:site_name" content="Stefano Cianciulli">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Stefano Cianciulli">
 
@@ -49,11 +50,7 @@
 
 
 </head>
-<body
-  
-    class="monochrome"
-  
-  >
+<body class="monochrome">
   <div class="mobile-header">
   <button class="sidebar-toggle" type="button">
     <span class="icon-bar"></span>
@@ -107,6 +104,12 @@
               </li>
             
           
+            
+              <li>
+                <a href="/now" title="What I'm Doing Now">What I'm Doing Now</a>
+              </li>
+            
+          
         </ul>
       
         <ul class="nav">
@@ -131,19 +134,19 @@
           
             
               <li>
-                <a href="https://github.com/CianciuStyles" title="Github" target="_blank" rel="external">Github</a>
+                <a href="https://github.com/CianciuStyles" title="Github" target="_blank" rel="noopener">Github</a>
               </li>
             
           
             
               <li>
-                <a href="https://it.linkedin.com/in/stefanocianciulli" title="LinkedIn" target="_blank" rel="external">LinkedIn</a>
+                <a href="https://it.linkedin.com/in/stefanocianciulli" title="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
               </li>
             
           
             
               <li>
-                <a href="https://twitter.com/CianciuStyles" title="Twitter" target="_blank" rel="external">Twitter</a>
+                <a href="https://twitter.com/CianciuStyles" title="Twitter" target="_blank" rel="noopener">Twitter</a>
               </li>
             
           
@@ -167,7 +170,7 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
-        <a href="/2017/10/16/Notes-From-Uncle-Bob-s-Clean-Code-Videos/" >
+        <a href="/2017/10/16/Notes-From-Uncle-Bob-s-Clean-Code-Videos/">
   Notes From Uncle Bob&#39;s Clean Code Videos
 </a>
 
@@ -190,7 +193,7 @@
       </div>
       <div class="article-entry">
         
-          <p>Over the last few weeks, I have had the opportunity to dedicate a couple of hours of my Mondays to watch the <a href="https://cleancoders.com/videos/clean-code" target="_blank" rel="external">“Clean Code” video series</a> by <a href="https://twitter.com/unclebobmartin" target="_blank" rel="external">Robert C. Martin</a> (more informally known as Uncle Bob). In the past, I have tried to read the <a href="https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/" target="_blank" rel="external">book</a> from which these videos are produced, but I always ended up not finishing it due to the usual excuses, like lack of time, procrastination, etc. Having a weekly meeting organised at my workplace to watch the videos together and have a discussion about them with my colleagues afterwards has been a vastly superior plan to my own, and indeed this made me stick to watch all the available videos.</p>
+          <p>Over the last few weeks, I have had the opportunity to dedicate a couple of hours of my Mondays to watch the <a href="https://cleancoders.com/videos/clean-code" target="_blank" rel="noopener">“Clean Code” video series</a> by <a href="https://twitter.com/unclebobmartin" target="_blank" rel="noopener">Robert C. Martin</a> (more informally known as Uncle Bob). In the past, I have tried to read the <a href="https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/" target="_blank" rel="noopener">book</a> from which these videos are produced, but I always ended up not finishing it due to the usual excuses, like lack of time, procrastination, etc. Having a weekly meeting organised at my workplace to watch the videos together and have a discussion about them with my colleagues afterwards has been a vastly superior plan to my own, and indeed this made me stick to watch all the available videos.</p>
 <p>During the sessions I have jotted down some notes on the topics I thought were more relevant and applicable to my day-to-day job, and I am going to report them in the remainder of this post:</p>
 <h3 id="Clean-Code"><a href="#Clean-Code" class="headerlink" title="Clean Code"></a>Clean Code</h3><ul>
 <li>The messier the code, the more time it will take to add features later in the project’s codebase.</li>
@@ -205,7 +208,7 @@
 <li>Every time you name something, the name should reveal your intentions. If you need to write a comment after the name, the name is not good enough.</li>
 <li>If you have to go look in the code to understand a name, the name has failed its purpose.</li>
 <li>To disinform means to have a name that gives the reader a different intention than the author’s.</li>
-<li>There’s no need anymore for prefixes for types (the <a href="https://en.wikipedia.org/wiki/Hungarian_notation" target="_blank" rel="external">Hungarian notation</a>), the IDE and compilers are smart enough to take this for you.</li>
+<li>There’s no need anymore for prefixes for types (the <a href="https://en.wikipedia.org/wiki/Hungarian_notation" target="_blank" rel="noopener">Hungarian notation</a>), the IDE and compilers are smart enough to take this for you.</li>
 <li>Boolean variables should be named as predicates, e.g. <em>isEmpty</em>.</li>
 <li>Method names should be verbs, as they express actions (except the methods that return boolean values).</li>
 <li>The longer the scope of a variable, the longer its name should be (if the scope is short, the variable name is used very near to the declaration, and hence it’s easy to look for what it stands for).</li>
@@ -224,14 +227,14 @@
 <li>Usually we should strive for 0 to 2 arguments; with 3 it already becomes a problem to remember the order.</li>
 <li>Most times we pass a boolean argument to a function, we are declaring that the function is actually doing two things: one for the true case, and one for the false case.</li>
 <li>If a function expects a null value, it’s like the boolean case: we expect to behave in a different way when the object is null, and in another way when the object is not null. Write two functions instead.</li>
-<li>The <a href="http://tidyjava.com/stepdown-rule/" target="_blank" rel="external"><em>stepdown rule</em></a> says that public, more general methods should go at the top of the class, while private, most detailed methods functions should go at the bottom. This creates a new level of abstraction each time we scroll down the code.</li>
+<li>The <a href="http://tidyjava.com/stepdown-rule/" target="_blank" rel="noopener"><em>stepdown rule</em></a> says that public, more general methods should go at the top of the class, while private, most detailed methods functions should go at the bottom. This creates a new level of abstraction each time we scroll down the code.</li>
 <li>Interfaces allow to invert the source code dependency between two modules A and B, so they are not required to be deployed together anymore.</li>
 <li>When we have a plug-in structure, it allows the dev team to work independently on different parts of the code. Switch statements and long chains of if-else statements break these premises.</li>
-<li><a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="external"><em>Functional programming</em></a> is the programming style which does not allow assignments and side effects. This makes functions “pure” mathematical functions, so that the same inputs will always result in the same output.</li>
+<li><a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="noopener"><em>Functional programming</em></a> is the programming style which does not allow assignments and side effects. This makes functions “pure” mathematical functions, so that the same inputs will always result in the same output.</li>
 <li><em>Temporal coupling</em> is when the order of function calls matter.</li>
 <li><em>Queries</em> (e.g., getters) should not change the state of an object and just return a value; <em>commands</em> should always return void, possibly throwing exceptions for error cases.</li>
 <li>Individual functions should have a limited knowledge of the overall system.</li>
-<li><a href="https://en.wikipedia.org/wiki/Structured_programming" target="_blank" rel="external"><em>Structured programming</em></a> says that a program should composed from three basic blocks: <strong>sequence</strong>, <strong>selection</strong> and <strong>iteration</strong>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Structured_programming" target="_blank" rel="noopener"><em>Structured programming</em></a> says that a program should composed from three basic blocks: <strong>sequence</strong>, <strong>selection</strong> and <strong>iteration</strong>.</li>
 <li>Error handling is important, but if it obscures the logic, it’s wrong.</li>
 <li>Always use unchecked exceptions (i.e., make your exceptions derive from RuntimeException).</li>
 <li>Most of the work should be done by the name, the context and the scope of the exception thrown, so that no message should be needed.</li>
@@ -268,13 +271,13 @@
 <li>Data structures have public variables and (virtually) no methods, while classes have private variables and public methods.</li>
 <li>Data structures and switch statements are as related as classes and polymorphism are.</li>
 <li>Classes protect us from new types, but suffer from new methods; data structures protect us from new methods, but suffer from new types.</li>
-<li>A row in the database is mapped to a data structure, not a class. This is called the <a href="https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch" target="_blank" rel="external"><em>impedence mismatch</em></a>.</li>
+<li>A row in the database is mapped to a data structure, not a class. This is called the <a href="https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch" target="_blank" rel="noopener"><em>impedence mismatch</em></a>.</li>
 <li>The rule of boundaries states that, when identifying a boundary, the information should go away from the concrete and toward the abstract.</li>
 </ul>
 <h3 id="Test-Driven-Development"><a href="#Test-Driven-Development" class="headerlink" title="Test-Driven Development"></a>Test-Driven Development</h3><ul>
 <li>A test suite with good coverage eliminates the fear of change.</li>
 <li>Tests let you clean your code.</li>
-<li>The three laws of <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="external">Test-Driven Development</a> are:<ul>
+<li>The three laws of <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">Test-Driven Development</a> are:<ul>
 <li>you should write no production code unless you have a failing test first</li>
 <li>you should stop writing tests as soon as you have a failing one</li>
 <li>you should write only the code that makes the failing test pass</li>
@@ -285,7 +288,7 @@
 <li>The tests test the production code, and the production code tests the tests.</li>
 </ul>
 <h3 id="Advanced-Test-Driven-Development"><a href="#Advanced-Test-Driven-Development" class="headerlink" title="Advanced Test-Driven Development"></a>Advanced Test-Driven Development</h3><ul>
-<li><a href="https://en.wikipedia.org/wiki/Code_refactoring" target="_blank" rel="external">Refactoring</a> is something you do continuously; you never ignore it, you never let it slide, you also don’t put it on a schedule or a plan.</li>
+<li><a href="https://en.wikipedia.org/wiki/Code_refactoring" target="_blank" rel="noopener">Refactoring</a> is something you do continuously; you never ignore it, you never let it slide, you also don’t put it on a schedule or a plan.</li>
 <li>To prepare a working environment to work in, focus on writing an empty test and make it pass.</li>
 <li>Ideally you should write all the degenerate tests first; if that’s not possible, make sure you write the next degenerate test as soon as possible.</li>
 <li>Every unit test should have only one assertion in it (<em>Single Assert rule</em>).</li>
@@ -328,7 +331,7 @@
 
           <div class="main-footer">
   
-    © 2017 Stefano Cianciulli - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+    © 2020 Stefano Cianciulli - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
   
 </div>
 
